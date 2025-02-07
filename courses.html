@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK's Academy - Courses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Saira', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #004aad;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 60px;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 img {
+            height: 70px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 2rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: relative;
+        }
+        nav:last-child {
+            margin-right: 2rem;
+        }
+
+        nav a:hover, nav button:hover {
+            background-color: #ffcc00;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button {
+            background-color: #e6e6e6;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button:hover {
+            background-color: #cccccc;
+            color: #004aad;
+        }
+
+        .content {
+            padding-top: 80px;
+            margin: 2rem;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #004aad;
+            margin-bottom: 2rem;
+        }
+
+        .category {
+            margin-bottom: 2rem;
+        }
+
+        .category h3 {
+            text-align: left;
+            color: #004aad;
+            margin-bottom: 1rem;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .course-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .course-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .course-card h3 {
+            margin: 1rem 0 0.5rem;
+            color: #004aad;
+        }
+
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="location.href='index.html'">
+            <img src="images/logo.png" alt="">
+            VK's Academy
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">Why Us</a>
+            <button hidden onclick="location.href='enquiry.html'">Enquiry</button>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Our Courses</h2>
+
+        <div class="category">
+            <h3>Entrance Exams</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/cet.png" alt="MHT-CET">
+                    <h3>MHT-CET</h3>
+                    <p>Comprehensive preparation for Maharashtra's engineering and medical entrance exam.</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/jee.png" alt="JEE">
+                    <h3>JEE</h3>
+                    <p>Expert coaching for India's premier engineering entrance examination.</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/neet.png" alt="NEET">
+                    <h3>NEET</h3>
+                    <p>Personalized training for the National Eligibility cum Entrance Test.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>School & Board Exams</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/stateboard.jpg" alt="State Board">
+                    <h3>State Board</h3>
+                    <p>Strong foundation courses for Maharashtra State Board students.</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/CBSE.png" alt="CBSE Board">
+                    <h3>CBSE Board</h3>
+                    <p>Comprehensive coaching for CBSE students in all subjects.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>Olympiads and Other Competitions</h3>
+            <div class="course-grid">
+                <div class="course-card">
+                    <img src="images/olympiad.png" alt="Olympiads">
+                    <h3>Olympiads</h3>
+                    <p>Focused coaching for Mathematics, Science, and other Olympiad exams.</p>
+                </div>
+                <div class="course-card">
+                    <img src="images/foundation.jpg" alt="Foundation">
+                    <h3>Foundation</h3>
+                    <p>Strong foundational courses for school students aiming for excellence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VK's Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

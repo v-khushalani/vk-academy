@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK's Academy - Enquiry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Saira', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #004aad;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            height: 60px;
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 img {
+            height: 70px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 2rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: relative;
+        }
+        nav button:last-child {
+            margin-right: 2rem;
+        }
+
+        nav a:hover, nav button:hover {
+            background-color: #ffcc00;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button {
+            background-color: #e6e6e6;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button:hover {
+            background-color: #cccccc;
+            color: #004aad;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto 0;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #004aad;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            background-color: #004aad;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffcc00;
+            color: #004aad;
+        }
+
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .container {
+                margin: 120px auto 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="location.href='index.html'">
+            <img src="logo.png" alt="VK's Academy Logo">
+            VK's Academy
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">Why Us</a>
+            <button onclick="location.href='enquiry.html'">Enquiry</button>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Enquiry Form</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="course">Course Interested In:</label>
+            <select id="course" name="course">
+                <option value="mht-cet">MHT-CET</option>
+                <option value="jee">JEE</option>
+                <option value="neet">NEET</option>
+                <option value="olympiads">Olympiads</option>
+                <option value="state-board">State Board</option>
+                <option value="cbse-board">CBSE Board</option>
+                <option value="foundation">Foundation</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 VK's Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>

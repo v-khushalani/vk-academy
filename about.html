@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK's Academy - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Saira', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: #004aad;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 60px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 img {
+            height: 70px;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a, nav button {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 2rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: relative;
+        }
+        nav:last-child {
+            margin-right: 2rem;
+        }
+
+        nav a:hover, nav button:hover {
+            background-color: #ffcc00;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button {
+            background-color: #e6e6e6;
+            color: #004aad;
+            border-radius: 50px;
+        }
+
+        nav button:hover {
+            background-color: #cccccc;
+            color: #004aad;
+        }
+
+
+        .content {
+            padding-top: 80px;
+            margin: 2rem;
+        }
+
+        .content h2 {
+            text-align: center;
+            color: #004aad;
+            margin-bottom: 2rem;
+        }
+
+        .category {
+            margin-bottom: 2rem;
+        }
+
+        .category h3 {
+            text-align: left;
+            color: #004aad;
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid.two-column {
+	    margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid.three-column {
+	    margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin: 1rem 0 0.5rem;
+            color: #004aad;
+        }
+
+        .card p {
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+	    .grid.two-column, .grid.three-column {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .card img {
+                max-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 onclick="location.href='index.html'">
+            <img src="images/logo.png" alt="">
+            VK's Academy
+        </h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="about.html">Why Us</a>
+            <button hidden onclick="location.href='enquiry.html'">Enquiry</button>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Why Choose Us?</h2>
+
+        <div class="grid two-column">
+            <div class="card">
+                <img src="images/team.png" alt="Stable Team of Faculties">
+                <h3>Stable Team of Faculties</h3>
+                <p>Our experienced and dedicated faculty are committed to ensuring student success.</p>
+            </div>
+            <div class="card">
+                <img src="images/content.jpg" alt="Interactive Animations">
+                <h3>Interactive Animations</h3>
+                <p>Smartboard technology brings lessons to life, making learning engaging and effective.</p>
+            </div>
+        </div>
+
+        <div class="grid three-column">
+            <div class="card">
+                <img src="images/library.jpg" alt="Dedicated Study Room / Library">
+                <h3>Dedicated Study Room / Library</h3>
+                <p>A quiet and focused environment helps students excel in their studies.</p>
+            </div>
+            <div class="card">
+                <img src="images/content.jpg" alt="Best Content in Town">
+                <h3>Best Content in Town</h3>
+                <p>Comprehensive and proven study material ensures top-notch results every year.</p>
+            </div>
+            <div class="card">
+                <img src="images/test.png" alt="Online Mock Tests">
+                <h3>Online Mock Tests</h3>
+                <p>Mock tests designed as per the latest exam patterns help students excel in competitive exams.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 VK's Academy. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
