@@ -271,9 +271,9 @@ body {
     padding-bottom: 2rem;
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.footer-section.about {
+/* .footer-section.about {
     margin-right: 6rem;
-}
+} */
 
 .footer-section h5 {
     color: var(--secondary-color);
@@ -337,7 +337,7 @@ body {
 
 .copyright {
     text-align: center;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     padding-top: 2rem;
     opacity: 0.7;
     font-size: 0.9rem;
