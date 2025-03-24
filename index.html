@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VK's Academy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 1rem;
+    color: white;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 1rem 1rem;
+    background: #f8f9fa;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+/* USP Section */
+.usp-section {
+    padding: 1rem 1rem;
+    background: #f8f9fa;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.usp-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Brand Logo and Name -->
+            <div class="brand">
+                <a href="index.html" class="brand-link">
+                    <img src="images/logo.png" alt="VK's Academy Logo" class="logo">
+                    <h1 class="brand-name">VK's Academy</h1>
+                </a>
+            </div>
+    
+            <!-- Hamburger Icon -->
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+    
+            <!-- Navigation Links -->
+            <nav class="main-nav" id="mainNav">
+                <div class="close-menu" id="closeMenu">
+                    <i class="fas fa-times"></i>
+                </div>
+                <a href="index.html" class="nav-link">Home</a>
+                <!-- <a href="courses.html" class="nav-link">Courses</a> -->
+                <!-- <a href="about.html" class="nav-link">About</a> -->
+                <a href="contact.html" class="nav-link">Contact</a>
+                <!-- Add Login Button -->
+                <!-- <a href="login.html" class="nav-link cta-login">Login</a> -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-pop-in">Bhusawal's Best Academy PROVEN BY RESULTS EVERY YEAR</h1>
+                <a href="#free-assessment" class="cta-button">
+                    Join the Revolution <i class="fas fa-rocket"></i>
+                </a>
+            </div>
+            <div class="hero-illustration">
+                <img src="images/ai-learning.png" alt="AI Learning" class="float">
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Badges -->
+    <div class="achievement-bar">
+        <div class="badge counter">
+            <div class="number" data-count="99.68">0</div>
+            <div class="label">Highest MH-CET %ile in Bhusawal</div>
+        </div>
+        <div class="badge counter">
+            <div class="number" data-count="94.70">+</div>
+            <div class="label">Highest JEE Mains %ile in Bhusawal</div>
+        </div>
+        <div class="badge counter">
+            <div class="number" data-count="4.8">0</div>
+            <div class="label">Google Rating</div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
+
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="year-marker">2020</div>
+                <div class="timeline-card left">
+                    <h3>The Beginning</h3>
+                    <!-- <p>We started with a small team of passionate educators, aiming to revolutionize online learning.</p> -->
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <!-- <div class="timeline-item">
+                <div class="year-marker">2021</div>
+                <div class="timeline-card right">
+                    <h3>First Milestone Achieved</h3>
+                    <p>We successfully launched our first course, reaching over 10,000 students worldwide.</p>
+                </div>
+            </div> -->
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="year-marker">2022</div>
+                <div class="timeline-card right">
+                    <h3>HSC: #1 in P.O Nahata College, Bhusawal</h3>
+                    <p>In the very first batch itself, we managed to produce exceptional results in Class 12th HSC Board Exams/p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="year-marker">2023</div>
+                <div class="timeline-card left">
+                    <h3>#1 in MH-CET & JEE Mains in Bhusawal</h3>
+                    <p>Not yet done! This year we went all in for MH-CET & JEE Mains too gaining the tag of BEST IN THE TOWN (with proven results)</p>
+                </div>
+            </div>
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="year-marker">2024</div>
+                <div class="timeline-card right">
+                    <h3>Every 2nd child at VK's Academy scored 90+ %ile</h3>
+                    <p>11 out of 22 students of our batch scored 90+ %ile in MH-CET</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP Section -->
+    <section class="usp-section">
+        <h3>Why Us?</h3>
+        <div class="usp-grid">
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h4>AI-Powered System</h4>
+                <p>Real-time performance tracking with predictive insights</p>
+            </div>
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                <h4>Personalized Learning</h4>
+                <p>Custom study plans based on your strengths</p>
+            </div>
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Performance Analytics</h4>
+                <p>Detailed progress reports & benchmarking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section about">
+                <h5>About VK's Academy</h5>
+                <p>VK's Academy is the only institute in Bhusawal focusing on the overall growth of a student with their exceptional team and innovative methods producing results like never before.</p>
+                <div class="trust-badges">
+                    <!-- <img src="images/.png" alt="Google 4.9 Rating">
+                    <img src="images/.png" alt="Secure Payment"> -->
+                </div>
+            </div>
+            
+            <!-- <div class="footer-section links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="courses.html"><i class="fas fa-arrow-right"></i> Courses</a></li>
+                    <li><a href="results.html"><i class="fas fa-arrow-right"></i> Results</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-arrow-right"></i> Privacy Policy</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section contact">
+                <h5>Contact Us</h5>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Bhusawal, India</li>
+                    <li><i class="fas fa-phone"></i> +91 70666 70222</li>
+                    <!-- <li><i class="fas fa-envelope"></i> matkaro@vksacademy.com</li> -->
+                </ul>
+                <!-- <div class="social-links"> -->
+                    <!-- <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                </div>
+            </div>
+
+            <!-- <div class="footer-section newsletter">
+                <h5>Get Updates</h5>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div> -->
+        </div>
+        <div class="copyright">
+            © 2025 VK's Academy. All rights reserved | Made with <i class="fas fa-heart"></i> in India
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+    <script>
+        // Counter Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter .number');
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const increment = target / 100;
+                let count = 0;
+                
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                const observer = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) {
+                        updateCounter();
+                        observer.disconnect();
+                    }
+                });
+                
+                observer.observe(counter.parentElement);
+            });
+        });
+    </script>
+</body>
+</html>
