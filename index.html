@@ -53,6 +53,20 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
+.masked-image img {
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1)    0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
     </style>
 </head>
 <body>
@@ -78,6 +92,7 @@
                     <i class="fas fa-times"></i>
                 </div>
                 <a href="index.html" class="nav-link">Home</a>
+                <a href="results.html" class="nav-link">Results</a>
                 <!-- <a href="courses.html" class="nav-link">Courses</a> -->
                 <!-- <a href="about.html" class="nav-link">About</a> -->
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -92,11 +107,11 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="animate-pop-in">Bhusawal's Best Academy PROVEN BY RESULTS EVERY YEAR</h1>
-<!--                 <a href="#free-assessment" class="cta-button">
+                <a href="#free-assessment" class="cta-button">
                     Join the Revolution <i class="fas fa-rocket"></i>
-                </a> -->
+                </a>
             </div>
-            <div class="hero-illustration">
+            <div class="hero-illustration masked-image">
                 <img src="images/ai-learning.png" alt="AI Learning" class="float">
             </div>
         </div>
