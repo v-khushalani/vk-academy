@@ -17,19 +17,25 @@
             position: relative;
             overflow: hidden;
         }
-
-        .star-performers-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 3rem auto;
-        }
         .star-performers-grid-1 {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
             gap: 2rem;
             max-width: 300px;
+            margin: 3rem auto;
+        }
+        .star-performers-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 700px;
+            margin: 3rem auto;
+        }
+        .star-performers-grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
             margin: 3rem auto;
         }
         .star-performers-grid-4 {
@@ -101,6 +107,7 @@
        @media (max-width: 768px) {
         .star-performers-grid-4,
         .star-performers-grid-3,
+        .star-performers-grid-2,
         .star-performers-grid-1 {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -123,7 +130,7 @@
         <div class="header-container">
             <!-- Brand Logo and Name -->
             <div class="brand">
-                <a href="homepage.html" class="brand-link">
+                <a href="index.html" class="brand-link">
                     <img src="images/logo.png" alt="VK's Academy Logo" class="logo">
                     <h1 class="brand-name">VK's Academy</h1>
                 </a>
@@ -139,8 +146,8 @@
                 <div class="close-menu" id="closeMenu">
                     <i class="fas fa-times"></i>
                 </div>
-                <a href="homepage.html" class="nav-link">Home</a>
-                <a href="index.html" class="nav-link">Results</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="results.html" class="nav-link">Results</a>
                 <!-- <a href="courses.html" class="nav-link">Courses</a> -->
                 <!-- <a href="about.html" class="nav-link">About</a> -->
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -151,10 +158,39 @@
     </header>
 
     <!-- Results Hero with Star Performers -->
-    <section class="results-hero">
+     <section class="results-hero">
         <canvas class="confetti-left" id="confetti"></canvas>
         <div class="celebration-container">
             <h1>🏆 Our Star Performers 🏆</h1>
+            <div class="score-display">
+                ⭐ 2025 ⭐
+            </div>
+            
+            <div class="star-performers-grid-2">
+                <!-- Student 1 -->
+                <div class="student-banner" style="background-image: url('images/shubhamf.jpeg')">
+                    <div class="student-info">
+                        <h3>Shubham Fabiyani</h3>
+                        <p>#1 in JEE MAINS in Bhusawal</p>
+                        <p>98.08 %ile (Physics)</p>
+                    </div>
+                </div>
+                <div class="student-banner" style="background-image: url('images/neelamm.jpeg')">
+                    <div class="student-info">
+                        <h3>Neelam Manwani</h3>
+                        <p>#1 in RS Adarsh School</p>
+                        <p>94.60 % (SSC)</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p class="tagline"><strong>⭐⭐⭐ Rank #1 in JEE MAINS in the town ⭐⭐⭐</strong></p>
+            </div>
+        </div>
+    </section>
+    <section class="results-hero">
+        <canvas class="confetti-left" id="confetti"></canvas>
+        <div class="celebration-container">
             <div class="score-display">
                 ⭐ <strong>2024</strong> ⭐ 
             </div>
@@ -187,7 +223,7 @@
                 </div>
             </div>
             <div>
-                <p class="tagline"><strong>⭐⭐⭐ Every 2nd student (11 out of 22 students) at VK's ACADEMY scored 90+ %ile in MH-CET 2024 ⭐⭐⭐</strong></p>
+                <p class="tagline"><strong>⭐⭐⭐ Every 2nd student (11 out of 22) at VK's ACADEMY scored 90+ %ile in MH-CET 2024 ⭐⭐⭐</strong></p>
             </div>
             
         </div>
@@ -242,9 +278,8 @@
     <section class="results-hero">
         <canvas class="confetti-left" id="confetti"></canvas>
         <div class="celebration-container">
-            <h1>🏆 Our Star Performers 🏆</h1>
             <div class="score-display">
-                ⭐ First Batch ⭐
+                ⭐ 2022 - First Batch ⭐
             </div>
             
             <div class="star-performers-grid-1">
@@ -262,6 +297,7 @@
 
     
     <!-- Key Achievements & Testimonials -->
+    <script src="js/main.js"></script>
 
     <script>
         // Left-Origin Confetti Animation
