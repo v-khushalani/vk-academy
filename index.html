@@ -3,128 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Performers | VK's Academy</title>
+    <title>VK's Academy</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Custom Results Page Styles */
-        .results-hero {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 2rem 1rem;
-            text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .star-performers-grid-1 {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2rem;
-            max-width: 300px;
-            margin: 3rem auto;
-        }
-        .star-performers-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 700px;
-            margin: 3rem auto;
-        }
-        .star-performers-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 3rem auto;
-        }
-        .star-performers-grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 4.5rem auto;
-        }
+        /* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 4rem 1rem;
+    color: white;
+}
 
-        .student-banner {
-            position: relative;
-            border-radius: 1rem;
-            overflow: hidden;
-            min-height: 400px;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
 
-        .student-banner:hover {
-            transform: translateY(-10px);
-        }
+/* Timeline Section */
+.timeline-section {
+    padding: 1rem 1rem;
+    background: #f8f9fa;
+}
 
-        .student-banner::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(transparent 40%, rgba(0,0,0,0.7));
-        }
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
 
-        .student-info {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            z-index: 2;
-            text-align: left;
-        }
+/* USP Section */
+.usp-section {
+    padding: 1rem 1rem;
+    background: #f8f9fa;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
 
-        .confetti-left {
-            position: fixed;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
+.usp-grid {
+    max-width: 1200px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+.masked-image img {
+  width: 100%;
+  height: auto;
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 1)    0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+    .banner-section {
+    width: 100%;
+    overflow: hidden;
+}
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-        .tagline{
-            font-size:24px;
-            background-color: #ffcc00;
-            color: #000;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            padding: 0.5rem;
-            margin: 0 -2rem ;
-       }
-       @media (max-width: 768px) {
-        .star-performers-grid-4,
-        .star-performers-grid-3,
-        .star-performers-grid-2,
-        .star-performers-grid-1 {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            gap: 2rem;
-            max-width: 300px;
-            margin: 4.5rem auto;
-        }
-        .tagline{
-            font-size: 18px;
-            text-align: center;
-            margin: -24px;
-        }
-       }
-    </style>
+.banner-image {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+</style>
 </head>
 <body>
-    
     <!-- Header -->
     <header class="main-header">
         <div class="header-container">
@@ -146,8 +103,8 @@
                 <div class="close-menu" id="closeMenu">
                     <i class="fas fa-times"></i>
                 </div>
-                <a href="homepage.html" class="nav-link">Home</a>
-                <a href="index.html" class="nav-link">Results</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="results.html" class="nav-link">Results</a>
                 <!-- <a href="courses.html" class="nav-link">Courses</a> -->
                 <!-- <a href="about.html" class="nav-link">About</a> -->
                 <a href="contact.html" class="nav-link">Contact</a>
@@ -156,217 +113,207 @@
             </nav>
         </div>
     </header>
+<!-- Banner Section -->
+<section class="banner-section">
+    <img src="images/banner.jpg" alt="VK's Academy Banner" class="banner-image">
+</section>
 
-    <!-- Results Hero with Star Performers -->
-     <section class="results-hero">
-        <canvas class="confetti-left" id="confetti"></canvas>
-        <div class="celebration-container">
-            <h1>🏆 Our Star Performers 🏆</h1>
-            <div class="score-display">
-                ⭐ 2025 ⭐
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="animate-pop-in">Bhusawal's Best Academy PROVEN BY RESULTS EVERY YEAR</h1>
+                <!-- <a href="#" class="cta-button">
+                    Join the Revolution <i class="fas fa-rocket"></i>
+                </a> -->
             </div>
-            
-            <div class="star-performers-grid-2">
-                <!-- Student 1 -->
-                <div class="student-banner" style="background-image: url('images/shubhamf.jpeg')">
-                    <div class="student-info">
-                        <h3>Shubham Fabiyani</h3>
-                        <p>#1 in JEE MAINS in Bhusawal</p>
-                        <p>98.08 %ile (Physics)</p>
-                    </div>
-                </div>
-                <div class="student-banner" style="background-image: url('images/neelamm.jpeg')">
-                    <div class="student-info">
-                        <h3>Neelam Manwani</h3>
-                        <p>#1 in RS Adarsh School</p>
-                        <p>94.60 % (SSC)</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="tagline"><strong>⭐⭐⭐ Rank #1 in JEE MAINS in the town ⭐⭐⭐</strong></p>
+            <div class="hero-illustration masked-image">
+                <img src="images/ai-learning.png" alt="AI Learning" class="float">
             </div>
         </div>
     </section>
-    <section class="results-hero">
-        <canvas class="confetti-left" id="confetti"></canvas>
-        <div class="celebration-container">
-            <div class="score-display">
-                ⭐ <strong>2024</strong> ⭐ 
-            </div>
-            
-            <div class="star-performers-grid-3">
-                <!-- Student 1 -->
-                <div class="student-banner" style="background-image: url('images/soanmk.jpg')">
-                    <div class="student-info">
-                        <h3>Sonam Kukreja</h3>
-                        <p>98.41%ile MH-CET Physics</p>
-                        <p>Qualified for JEE Advanced</p>
-                    </div>
-                </div>
 
-                <!-- Student 2 -->
-                <div class="student-banner" style="background-image: url('images/yuktak.jpg')">
-                    <div class="student-info">
-                        <h3>Yukta Khushalani</h3>
-                        <p>96.49%ile MH-CET</p>
-                        <p>Qualified for JEE Advanced</p>
-                    </div>
-                </div>
-
-                <!-- Student 3 -->
-                <div class="student-banner" style="background-image: url('images/gungunr.jpg')">
-                    <div class="student-info">
-                        <h3>Gungun Ramchandani</h3>
-                        <p>96.16%ile MH-CET</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <p class="tagline"><strong>⭐⭐⭐ Every 2nd student (11 out of 22) at VK's ACADEMY scored 90+ %ile in MH-CET 2024 ⭐⭐⭐</strong></p>
-            </div>
-            
+    <!-- Achievement Badges -->
+    <div class="achievement-bar">
+        <div class="badge counter">
+            <div class="number" data-count="99.68">0</div>
+            <div class="label">Highest MH-CET %ile in Bhusawal</div>
         </div>
-    </section>
-    <section class="results-hero">
-        <canvas class="confetti-left" id="confetti"></canvas>
-        <div class="celebration-container">
-            <div class="score-display">
-            </div>
-            <strong>⭐ 2023 ⭐</strong>
-            <div class="star-performers-grid-4">
-                <!-- Student 1 -->
-                <div class="student-banner" style="background-image: url('images/yashc.png')">
-                    <div class="student-info">
-                        <h3>Yash Chhabdiya</h3>
-                        <p>99.68%ile MH-CET Physics</p>
-                        <p>Qualified for JEE Advanced</p>
-                    </div>
-                </div>
-
-                <!-- Student 2 -->
-                <div class="student-banner" style="background-image: url('images/palakb.jpg')">
-                    <div class="student-info">
-                        <h3>Palak Bajaj</h3>
-                        <p>96.99%ile MH-CET Physics</p>
-                    </div>
-                </div>
-
-                <!-- Student 3 -->
-                <div class="student-banner" style="background-image: url('images/yashk.png')">
-                    <div class="student-info">
-                        <h3>Yash Katiyara</h3>
-                        <p>96.99%ile MH-CET Physics</p>
-                    </div>
-                </div>
-
-                <div class="student-banner" style="background-image: url('images/sahilt.png')">
-                    <div class="student-info">
-                        <h3>Sahil Tanwani</h3>
-                        <p>96.14%ile MH-CET</p>
-                        <p>Qualified for JEE Advanced</p>
-                    </div>
-                </div>
-                
-            </div>
-            <div>
-                <p class="tagline"><strong>⭐⭐⭐ 4 out of 7 students qualified for JEE Advanced 2023 ⭐⭐⭐</strong></p>
-            </div>
-            
+        <div class="badge counter">
+            <div class="number" data-count="98.08">+</div>
+            <div class="label">Highest JEE Mains %ile in Bhusawal</div>
         </div>
-    </section>
-    <section class="results-hero">
-        <canvas class="confetti-left" id="confetti"></canvas>
-        <div class="celebration-container">
-            <div class="score-display">
-                ⭐ 2022 - First Batch ⭐
-            </div>
-            
-            <div class="star-performers-grid-1">
-                <!-- Student 1 -->
-                <div class="student-banner" style="background-image: url('images/anmolb.png')">
-                    <div class="student-info">
-                        <h3>Anmol Bhirya</h3>
-                        <p>#1 in Maths in Bhusawal (HSC)</p>
-                    </div>
+        <div class="badge counter">
+            <div class="number" data-count="4.8">0</div>
+            <div class="label">Google Rating</div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="timeline-container">
+            <!-- Timeline Line -->
+            <div class="timeline-line"></div>
+            <!-- Timeline Item 2025 -->
+            <div class="timeline-item">
+                <div class="year-marker">2025</div>
+                <div class="timeline-card left">
+                    <h3>#1 Rank in JEE Mains 2025</h3>
+                    <p>98.08 %ile in Physics, 95.09%ile Overall</p>
                 </div>
             </div>
-            
+            <!-- Timeline Item 2021 -->
+            <!-- <div class="timeline-item">
+                <div class="year-marker">2021</div>
+                <div class="timeline-card right">
+                    <h3>First Milestone Achieved</h3>
+                    <p>We successfully launched our first course, reaching over 10,000 students worldwide.</p>
+                </div>
+            </div> -->
+            <!-- Timeline Item 2024 -->
+            <div class="timeline-item">
+                <div class="year-marker">2024</div>
+                <div class="timeline-card right">
+                    <h3>Every 2nd child at VK's Academy scored 90+ %ile</h3>
+                    <p>11 out of 22 students of our batch scored 90+ %ile in MH-CET</p>
+                </div>
+            </div>
+            <!-- Timeline Item 2023 -->
+            <div class="timeline-item">
+                <div class="year-marker">2023</div>
+                <div class="timeline-card left">
+                    <h3>#1 in MH-CET & JEE Mains in Bhusawal</h3>
+                    <p>Not yet done! This year we went all in for MH-CET & JEE Mains too gaining the tag of BEST IN THE TOWN (with proven results)</p>
+                </div>
+            </div>
+                        <!-- Timeline Item 2022 -->
+                        <div class="timeline-item">
+                            <div class="year-marker">2022</div>
+                            <div class="timeline-card right">
+                                <h3>HSC: #1 in P.O Nahata College, Bhusawal</h3>
+                                <p>In the very first batch itself, we managed to produce exceptional results in Class 12th HSC Board Exams</p>
+                            </div>
+            </div>
+            <!-- Timeline Item 2020 -->
+            <div class="timeline-item">
+                <div class="year-marker">2020</div>
+                <div class="timeline-card left">
+                    <h3>The Beginning</h3>
+                    <!-- <p>We started with a small team of passionate educators, aiming to revolutionize online learning.</p> -->
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- USP Section -->
+    <section class="usp-section">
+        <h3>Why Us?</h3>
+        <div class="usp-grid">
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h4>AI-Powered System</h4>
+                <p>Real-time performance tracking with predictive insights</p>
+            </div>
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                <h4>Personalized Learning</h4>
+                <p>Custom study plans based on your strengths</p>
+            </div>
+            <div class="usp-card hover-scale">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h4>Performance Analytics</h4>
+                <p>Detailed progress reports & benchmarking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-section about">
+                <h5>About VK's Academy</h5>
+                <p>VK's Academy is the only institute in Bhusawal focusing on the overall growth of a student with their exceptional team and innovative methods producing results like never before.</p>
+                <div class="trust-badges">
+                    <!-- <img src="images/.png" alt="Google 4.9 Rating">
+                    <img src="images/.png" alt="Secure Payment"> -->
+                </div>
+            </div>
+            
+            <!-- <div class="footer-section links">
+                <h5>Quick Links</h5>
+                <ul>
+                    <li><a href="courses.html"><i class="fas fa-arrow-right"></i> Courses</a></li>
+                    <li><a href="results.html"><i class="fas fa-arrow-right"></i> Results</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                    <li><a href="privacy.html"><i class="fas fa-arrow-right"></i> Privacy Policy</a></li>
+                </ul>
+            </div> -->
+
+            <div class="footer-section contact">
+                <h5>Contact Us</h5>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Bhusawal, India</li>
+                    <li><i class="fas fa-phone"></i> +91 70666 70222</li>
+                    <!-- <li><i class="fas fa-envelope"></i> matkaro@vksacademy.com</li> -->
+                </ul>
+                <!-- <div class="social-links"> -->
+                    <!-- <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a> -->
+                </div>
+            </div>
+
+            <!-- <div class="footer-section newsletter">
+                <h5>Get Updates</h5>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+                </form>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div> -->
+        </div>
+        <div class="copyright">
+            © 2025 VK's Academy. All rights reserved | Made with <i class="fas fa-heart"></i> in India
+        </div>
+    </footer>
     
-    <!-- Key Achievements & Testimonials -->
+
     <script src="js/main.js"></script>
-
     <script>
-        // Left-Origin Confetti Animation
-        const canvas = document.getElementById('confetti');
-        const ctx = canvas.getContext('2d');
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        const confettiPieces = [];
-        class Confetti {
-            constructor() {
-                this.colors = ['#2A2A72', '#009FFD', '#FFA400'];
-                this.x = -10; // Start from left
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 10 + 3;
-                this.color = this.colors[Math.floor(Math.random() * this.colors.length)];
-                this.velocity = Math.random() * 5 + 3;
-                this.angle = Math.random() * Math.PI * 2;
-            }
-
-            update() {
-                this.x += this.velocity;
-                this.y += Math.sin(this.angle) * 2;
-                this.angle += 0.1;
-                if (this.x > canvas.width) this.x = -10;
-            }
-
-            draw() {
-                ctx.fillStyle = this.color;
-                ctx.fillRect(this.x, this.y, this.size, this.size);
-            }
-        }
-
-        function animateConfetti() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Counter Animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const counters = document.querySelectorAll('.counter .number');
             
-            if (confettiPieces.length < 75) {
-                confettiPieces.push(new Confetti());
-            }
-
-            confettiPieces.forEach((piece, index) => {
-                piece.update();
-                piece.draw();
-            });
-
-            requestAnimationFrame(animateConfetti);
-        }
-
-        animateConfetti();
-
-        // Banner Hover Effect
-        document.querySelectorAll('.student-banner').forEach(banner => {
-            banner.addEventListener('mousemove', (e) => {
-                const rect = banner.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                banner.style.transform = `
-                    perspective(1000px)
-                    rotateX(${(y - rect.height/2) / 10}deg)
-                    rotateY(${-(x - rect.width/2) / 10}deg)
-                    translateY(-10px)
-                `;
-            });
-
-            banner.addEventListener('mouseleave', () => {
-                banner.style.transform = 'translateY(-10px)';
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const increment = target / 100;
+                let count = 0;
+                
+                const updateCounter = () => {
+                    if (count < target) {
+                        count += increment;
+                        counter.textContent = Math.ceil(count);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+                
+                const observer = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) {
+                        updateCounter();
+                        observer.disconnect();
+                    }
+                });
+                
+                observer.observe(counter.parentElement);
             });
         });
     </script>
-    
 </body>
 </html>
